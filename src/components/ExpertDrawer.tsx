@@ -68,6 +68,10 @@ export default function ExpertDrawer() {
       return () => {
         audio.removeEventListener('canplaythrough', handleCanPlay)
         audio.removeEventListener('error', handleError)
+        audio.pause()
+        audio.src = ''
+        audio.load()
+        audioRef.current = null
       }
     } else {
       audioRef.current = null
@@ -83,7 +87,15 @@ export default function ExpertDrawer() {
     } else {
       document.body.style.overflow = ''
     }
-    return () => { document.body.style.overflow = '' }
+    return () => {
+      document.body.style.overflow = ''
+      // Cleanup all audio on unmount to prevent memory leaks
+      cancelFallback()
+      if (audioRef.current) {
+        audioRef.current.pause()
+        audioRef.current.src = ''
+      }
+    }
   }, [selectedExpert])
 
   useEffect(() => {
