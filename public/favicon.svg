@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#0E1424"/>
+  <!-- Gold diamond / star shape -->
+  <path d="M16 3 L20 13 L29 16 L20 19 L16 29 L12 19 L3 16 L12 13 Z" fill="#D4AF37"/>
+  <!-- Inner highlight -->
+  <path d="M16 8 L18 13.5 L23 16 L18 18.5 L16 24 L14 18.5 L9 16 L14 13.5 Z" fill="#E8C84A" opacity="0.6"/>
+</svg>

@@ -1,0 +1,386 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-navy: #0E1424;
+  --color-gold: #D4AF37;
+  --color-gold-light: #e6c65c;
+  --color-gold-dim: #b8962e;
+
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Cinzel', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, .font-heading {
+  font-family: var(--font-heading) !important;
+}
+
+/* h4-h6 remain in Plus Jakarta Sans for B2B readability at small sizes */
+h4, h5, h6 {
+  font-family: var(--font-sans);
+  letter-spacing: 0.02em;
+}
+
+body {
+  @apply bg-dark-navy text-white font-sans antialiased;
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+/* ── Cinematic Vignette (anamorphic lens effect) ── */
+main::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.45) 100%);
+}
+
+/* ── Section Divider: radial gold light beam ── */
+.section-glow-divider {
+  position: relative;
+}
+
+.section-glow-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 700px;
+  height: 1px;
+  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.75) 0%, rgba(212, 175, 55, 0.2) 40%, transparent 75%);
+  pointer-events: none;
+}
+
+.section-glow-divider::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  max-width: 500px;
+  height: 120px;
+  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@keyframes logo-pulsate {
+  0%, 100% {
+    filter: drop-shadow(0 0 22px rgba(212, 175, 55, 0.28)) drop-shadow(0 0 45px rgba(212, 175, 55, 0.12));
+  }
+  50% {
+    filter: drop-shadow(0 0 35px rgba(212, 175, 55, 0.55)) drop-shadow(0 0 75px rgba(212, 175, 55, 0.28));
+  }
+}
+
+.gold-logo-glow {
+  animation: logo-pulsate 5s ease-in-out infinite;
+}
+
+/* Premium scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-dim);
+  border-radius: 2px;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Equalizer / Audio Wave Animation */
+@keyframes wave-pulse {
+  0%, 100% {
+    transform: scaleY(0.15);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-wave-bar {
+  animation: wave-pulse 1.2s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+/* Soft gold ambient glow */
+.gold-glow {
+  box-shadow: 0 0 50px -10px rgba(212, 175, 55, 0.15);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 40px -5px rgba(212, 175, 55, 0.25);
+}
+
+/* Dual looping audio waveforms on expert card hover */
+@keyframes wave-flow-forward {
+  from {
+    stroke-dashoffset: 36;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes wave-flow-backward {
+  from {
+    stroke-dashoffset: -36;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.expert-card-wave-1 {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 320;
+  stroke: rgba(212, 175, 55, 0.05);
+  stroke-width: 0.75px;
+  transition: stroke-dashoffset 0.8s cubic-bezier(0.25, 1, 0.5, 1), stroke 0.3s ease, stroke-width 0.3s ease;
+}
+
+.expert-card-wave-2 {
+  stroke-dasharray: 320;
+  stroke-dashoffset: -320;
+  stroke: rgba(212, 175, 55, 0.03);
+  stroke-width: 0.5px;
+  transition: stroke-dashoffset 1s cubic-bezier(0.25, 1, 0.5, 1), stroke 0.3s ease, stroke-width 0.3s ease;
+}
+
+.expert-card-container:hover .expert-card-wave-1 {
+  stroke-dashoffset: 0;
+  stroke: var(--color-gold);
+  stroke-width: 1.5px;
+}
+
+.expert-card-container:hover .expert-card-wave-2 {
+  stroke-dashoffset: 0;
+  stroke: rgba(212, 175, 55, 0.4);
+  stroke-width: 1px;
+}
+
+
+/* Metallic Liquid Gold Typography */
+.text-gold-metallic {
+  background: linear-gradient(
+    to right,
+    #FFEAA5 0%,
+    #D4AF37 35%,
+    #AA8723 50%,
+    #D4AF37 65%,
+    #FFEAA5 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gold-shimmer 6s linear infinite;
+}
+
+@keyframes gold-shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+/* Horizontal Laser Sweep Animation */
+@keyframes laser-sweep {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  85% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(340px); /* sweeps past card height */
+    opacity: 0;
+  }
+}
+
+.animate-laser-scan {
+  animation: laser-sweep 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Fullscreen Laser Sweep Transition */
+@keyframes fullscreen-laser {
+  0% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+.animate-fullscreen-laser {
+  animation: fullscreen-laser 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* SVG circuit pulse flow animation */
+@keyframes pulse-flow-anim {
+  from {
+    stroke-dashoffset: 60;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-pulse-flow {
+  animation: pulse-flow-anim 1.5s linear infinite;
+}
+
+@keyframes active-card-glow {
+  0%, 100% {
+    border-color: rgba(212, 175, 55, 0.2);
+    box-shadow: 0 15px 45px rgba(212, 175, 55, 0.05);
+  }
+  50% {
+    border-color: rgba(212, 175, 55, 0.45);
+    box-shadow: 0 15px 55px rgba(212, 175, 55, 0.16);
+  }
+}
+
+.active-card-animate {
+  animation: active-card-glow 4s ease-in-out infinite;
+}
+
+@keyframes wave-flow {
+  0% {
+    stroke-dashoffset: 320;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-wave-active-1 {
+  animation: wave-flow 4s linear infinite !important;
+  stroke: var(--color-gold) !important;
+  stroke-width: 1.5px !important;
+  stroke-dasharray: 320 !important;
+}
+
+.animate-wave-active-2 {
+  animation: wave-flow 6s linear infinite !important;
+  stroke: rgba(212, 175, 55, 0.4) !important;
+  stroke-width: 1px !important;
+  stroke-dasharray: 320 !important;
+}
+
+/* ── CTA Glow Pulse ── */
+@keyframes cta-glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.15), 0 0 60px rgba(212, 175, 55, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.35), 0 0 80px rgba(212, 175, 55, 0.12);
+  }
+}
+
+.cta-glow {
+  animation: cta-glow-pulse 3s ease-in-out infinite;
+}
+
+/* ── Rotating Conic Border ── */
+@property --conic-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes conic-spin {
+  to { --conic-angle: 360deg; }
+}
+
+.conic-border {
+  position: relative;
+}
+
+.conic-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--conic-angle), transparent 0%, rgba(212, 175, 55, 0.4) 10%, transparent 20%, transparent 80%, rgba(212, 175, 55, 0.2) 90%, transparent 100%);
+  animation: conic-spin 8s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  z-index: 40;
+}
+
+/* ── Magnetic Cursor ── */
+.magnetic-cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--color-gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease-out, width 0.3s ease, height 0.3s ease;
+}
+
+.magnetic-cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+  transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+}
+
+.magnetic-cursor-ring.attracted {
+  width: 50px;
+  height: 50px;
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+.magnetic-cursor-dot.attracted {
+  width: 6px;
+  height: 6px;
+}
+
+/* Hide native cursor on desktop */
+@media (pointer: fine) {
+  body { cursor: none; }
+  a, button, [role="button"], input, textarea, select { cursor: none; }
+}
+
