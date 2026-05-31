@@ -182,10 +182,16 @@ export default function AiPresentation() {
       if (audio && !audio.paused) audio.pause()
       setPlayingAudio(null)
     } else {
-      // Play — must call audio.play() directly in click handler for mobile
+      // Play — MUST call audio.play() in click handler for mobile gesture policy
       const audio = audioRef.current
-      if (usingFile && audio) {
-        audio.play().catch(() => {})
+      if (audio) {
+        // Always try the real file first — play() in user gesture context
+        audio.play().then(() => {
+          setUsingFile(true)
+        }).catch(() => {
+          // File failed — fallback will activate via useEffect
+          setUsingFile(false)
+        })
       }
       setPlayingAudio('main')
     }

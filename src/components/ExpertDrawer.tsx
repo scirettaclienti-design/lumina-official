@@ -92,10 +92,14 @@ export default function ExpertDrawer() {
       setElapsedTime(0)
       setAudioProgress(0)
       setTotalDuration(estimatedDuration)
-      const t = setTimeout(() => setPlayingAudio(selectedExpert.name), 400)
-      return () => {
-        clearTimeout(t)
-        setPlayingAudio(null)
+      // Auto-play only on desktop — mobile requires user gesture
+      const isMobileDevice = window.innerWidth < 768
+      if (!isMobileDevice) {
+        const t = setTimeout(() => setPlayingAudio(selectedExpert.name), 400)
+        return () => {
+          clearTimeout(t)
+          setPlayingAudio(null)
+        }
       }
     }
   }, [selectedExpert, setPlayingAudio, estimatedDuration])
@@ -199,6 +203,15 @@ export default function ExpertDrawer() {
       if (audio) audio.pause()
       cancelFallback()
     } else {
+      // Play file directly in click handler for mobile gesture policy
+      const audio = audioRef.current
+      if (audio && selectedExpert.audioSrc) {
+        audio.play().then(() => {
+          setUsingFile(true)
+        }).catch(() => {
+          setUsingFile(false)
+        })
+      }
       setPlayingAudio(selectedExpert.name)
     }
   }
