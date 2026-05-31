@@ -253,7 +253,7 @@ export default function BlueprintEngine() {
                 <button
                   type="button"
                   onClick={() => {
-                    const heroInput = document.querySelector('input[type="text"]') as HTMLInputElement
+                    const heroInput = document.querySelector('textarea, input[type="text"]') as HTMLElement
                     if (heroInput) {
                       heroInput.focus()
                       window.scrollTo({ top: 0, behavior: 'smooth' })

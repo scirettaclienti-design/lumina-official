@@ -384,3 +384,10 @@ main::after {
   a, button, [role="button"], input, textarea, select { cursor: none; }
 }
 
+/* Mobile performance — reduce heavy GPU effects */
+@media (max-width: 767px) {
+  .backdrop-blur-xl { backdrop-filter: blur(8px) !important; -webkit-backdrop-filter: blur(8px) !important; }
+  .backdrop-blur-3xl { backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important; }
+  .backdrop-blur-md { backdrop-filter: blur(6px) !important; -webkit-backdrop-filter: blur(6px) !important; }
+}
+

@@ -249,6 +249,15 @@ export default function ExpertDrawer() {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 28, stiffness: 200 }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.2}
+            onDragEnd={(_e, info) => {
+              if (info.offset.x > 100) {
+                handleStopAudio()
+                setSelectedExpert(null)
+              }
+            }}
           >
             {/* ─── Hero Image Area ─── */}
             <div className="relative h-[320px] overflow-hidden">
@@ -265,13 +274,16 @@ export default function ExpertDrawer() {
               <span className="absolute top-5 left-5 text-[9px] font-mono px-3 py-1.5 rounded-full border backdrop-blur-xl bg-black/40 border-white/15 text-white/70 uppercase tracking-widest">
                 {selectedExpert.category}
               </span>
-              {/* Close button */}
+              {/* Close button — large touch target for mobile */}
               <button
                 onClick={() => { handleStopAudio(); setSelectedExpert(null) }}
-                className="absolute top-5 right-5 w-10 h-10 rounded-full backdrop-blur-xl bg-black/40 border border-white/15 hover:border-gold/40 text-white/60 hover:text-gold flex items-center justify-center transition-all cursor-pointer"
+                className="absolute top-4 right-4 w-12 h-12 rounded-full backdrop-blur-xl bg-black/50 border border-white/20 hover:border-gold/40 text-white/80 hover:text-gold flex items-center justify-center transition-all cursor-pointer active:scale-90"
+                aria-label="Chiudi profilo"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5"><path strokeLinecap="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><path strokeLinecap="round" d="M6 18 18 6M6 6l12 12" /></svg>
               </button>
+              {/* Swipe hint — mobile only */}
+              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-10 h-1 rounded-full bg-white/30 md:hidden" />
             </div>
 
             {/* ─── Content ─── */}
@@ -534,6 +546,16 @@ export default function ExpertDrawer() {
               )}
             </div>
             {/* ─── Floating Cart Bar ─── */}
+            {/* Close button — always visible at bottom on mobile */}
+            <div className="px-7 pb-6 md:hidden">
+              <button
+                onClick={() => { handleStopAudio(); setSelectedExpert(null) }}
+                className="w-full py-4 rounded-2xl border border-white/15 text-white/60 text-sm font-light tracking-wider uppercase active:scale-95 transition-all"
+              >
+                Chiudi profilo
+              </button>
+            </div>
+
             {(() => {
               const cartCount = useLuminaStore.getState().selectedCourses.length
               if (cartCount === 0) return null

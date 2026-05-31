@@ -21,6 +21,7 @@ function App() {
   const videoBackgroundActive = useLuminaStore((s) => s.videoBackgroundActive)
 
   const submitted = isGenerating || hasResults
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
 
   // Mouse coordinate values for the 3D parallax
   const mouseX = useMotionValue(0)
@@ -124,8 +125,8 @@ function App() {
         {/* Floating Island Navbar */}
         <Navbar />
 
-        {/* Golden Particle Network Backdrop */}
-        <ParticleNetwork />
+        {/* Golden Particle Network Backdrop — disabled on mobile for performance */}
+        {!isMobile && <ParticleNetwork />}
 
         {/* Delicate Blueprint Grid Overlay */}
         {/* Global geometric grid — finissimo, coerente su tutto il sito */}
@@ -134,42 +135,45 @@ function App() {
           backgroundSize: '60px 60px',
         }} />
 
-        {/* 3D Scroll-Parallax Video Backdrop — controlled by Cinema Mode */}
-        <motion.div
-          className="fixed inset-0 z-0 pointer-events-none w-[106vw] h-[106vh] -left-[3vw] -top-[3vh]"
-          animate={{ opacity: videoBackgroundActive ? 1 : 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          style={{
-            x: transformX,
-            y: combinedY,
-            scale: combinedScale,
-            opacity: combinedOpacity,
-            filter: combinedBlur,
-            mixBlendMode: 'screen',
-            willChange: 'transform, opacity, filter',
-            transform: 'translateZ(0)'
-          }}
-        >
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
+        {/* 3D Scroll-Parallax Video Backdrop — disabled on mobile for performance */}
+        {!isMobile && (
+          <motion.div
+            className="fixed inset-0 z-0 pointer-events-none w-[106vw] h-[106vh] -left-[3vw] -top-[3vh]"
+            animate={{ opacity: videoBackgroundActive ? 1 : 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            style={{
+              x: transformX,
+              y: combinedY,
+              scale: combinedScale,
+              opacity: combinedOpacity,
+              filter: combinedBlur,
+              mixBlendMode: 'screen',
+              willChange: 'transform, opacity, filter',
+              transform: 'translateZ(0)'
+            }}
           >
-            <source src="/hero_background.mp4" type="video/mp4" />
-          </video>
-        </motion.div>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="/hero_background.mp4" type="video/mp4" />
+            </video>
+          </motion.div>
+        )}
 
-
-        {/* Dynamic stage spotlight backlight following the mouse */}
-        <motion.div
-          className="fixed top-0 left-0 pointer-events-none rounded-full w-[600px] h-[600px] bg-gold/[0.04] blur-[150px] z-0"
-          style={{
-            x: spotlightTransformX,
-            y: spotlightTransformY,
-          }}
-        />
+        {/* Dynamic stage spotlight — desktop only */}
+        {!isMobile && (
+          <motion.div
+            className="fixed top-0 left-0 pointer-events-none rounded-full w-[600px] h-[600px] bg-gold/[0.04] blur-[150px] z-0"
+            style={{
+              x: spotlightTransformX,
+              y: spotlightTransformY,
+            }}
+          />
+        )}
 
         {/* Fullscreen Laser Sweep Transition when generating */}
         {isGenerating && (

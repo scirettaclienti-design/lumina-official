@@ -56,7 +56,7 @@ export default function Navbar() {
   const handleConfiguratorScroll = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
     setTimeout(() => {
-      const searchInput = document.querySelector('input[type="text"]') as HTMLInputElement
+      const searchInput = document.querySelector('textarea, input[type="text"]') as HTMLElement
       if (searchInput) searchInput.focus()
     }, 600)
   }

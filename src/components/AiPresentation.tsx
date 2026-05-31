@@ -69,15 +69,15 @@ export default function AiPresentation() {
   // Initialize HTMLAudioElement
   useEffect(() => {
     const audio = new Audio()
-    audio.preload = 'auto'
+    audio.preload = 'metadata'
     audio.src = MAIN_AUDIO_SRC
     audioRef.current = audio
     const handleCanPlay = () => setUsingFile(true)
     const handleError = () => setUsingFile(false)
-    audio.addEventListener('canplaythrough', handleCanPlay)
+    audio.addEventListener('canplay', handleCanPlay)
     audio.addEventListener('error', handleError)
     return () => {
-      audio.removeEventListener('canplaythrough', handleCanPlay)
+      audio.removeEventListener('canplay', handleCanPlay)
       audio.removeEventListener('error', handleError)
       audio.pause()
       audio.src = ''
