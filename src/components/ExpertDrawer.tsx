@@ -546,13 +546,13 @@ export default function ExpertDrawer() {
               )}
             </div>
             {/* ─── Floating Cart Bar ─── */}
-            {/* Close button — always visible at bottom on mobile */}
-            <div className="px-7 pb-6 md:hidden">
+            {/* Sticky close button — always visible on mobile */}
+            <div className="sticky bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#090d1a] via-[#090d1a]/95 to-transparent md:hidden z-40">
               <button
                 onClick={() => { handleStopAudio(); setSelectedExpert(null) }}
-                className="w-full py-4 rounded-2xl border border-white/15 text-white/60 text-sm font-light tracking-wider uppercase active:scale-95 transition-all"
+                className="w-full py-4 rounded-2xl bg-white/[0.06] border border-white/15 text-white/70 text-sm font-medium tracking-wider uppercase active:scale-95 transition-all"
               >
-                Chiudi profilo
+                Chiudi
               </button>
             </div>
 

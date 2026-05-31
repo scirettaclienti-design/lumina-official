@@ -177,8 +177,16 @@ export default function AiPresentation() {
 
   const handlePlayPause = () => {
     if (playingAudio === 'main') {
+      // Pause
+      const audio = audioRef.current
+      if (audio && !audio.paused) audio.pause()
       setPlayingAudio(null)
     } else {
+      // Play — must call audio.play() directly in click handler for mobile
+      const audio = audioRef.current
+      if (usingFile && audio) {
+        audio.play().catch(() => {})
+      }
       setPlayingAudio('main')
     }
   }
