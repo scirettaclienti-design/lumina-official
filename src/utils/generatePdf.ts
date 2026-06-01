@@ -263,5 +263,5 @@ export async function generateBlueprintPdf(
     doc.text(`${i} / ${totalPages}`, w - margin, h - 10, { align: 'right' })
   }
 
-  doc.save(`Lumina_XP_Blueprint_${Date.now()}.pdf`)
+  doc.save(`Lumina_AI_Report_${Date.now()}.pdf`)
 }

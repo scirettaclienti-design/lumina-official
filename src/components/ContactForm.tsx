@@ -470,7 +470,7 @@ export default function ContactForm() {
                   </span>
                 </div>
                 <p className="text-xs text-white/55 font-light max-w-sm mx-auto leading-relaxed">
-                  I dettagli del tuo <strong>Lumina Custom Blueprint</strong> sono stati preconfigurati e inviati con successo al dipartimento commerciale. Un account manager ti contatterà nelle prossime 24 ore.
+                  I dettagli della tua analisi <strong>Lumina AI</strong> sono stati preconfigurati e inviati con successo al dipartimento commerciale. Un account manager ti contatterà nelle prossime 24 ore.
                 </p>
 
                 {/* Mock PDF download */}
@@ -484,7 +484,7 @@ export default function ContactForm() {
                         // Generate mock PDF as a download text file with styled layout
                         const text = `================================================
           LUMINA XP - EXPERIENCE PLATFORM
-          RICEVUTA BLUEPRINT PRECONFIGURATO
+          RICEVUTA LUMINA AI PRECONFIGURATA
 ================================================
 ID PROGETTO: ${projectId}
 DATA EMISSIONE: ${new Date().toLocaleDateString('it-IT')}
@@ -515,7 +515,7 @@ Grazie per aver scelto Lumina XP.
                         const url = URL.createObjectURL(blob)
                         const a = document.createElement('a')
                         a.href = url
-                        a.download = `Lumina_XP_Blueprint_${projectId}.txt`
+                        a.download = `Lumina_AI_Report_${projectId}.txt`
                         a.click()
                         URL.revokeObjectURL(url)
                       }}

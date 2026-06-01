@@ -247,7 +247,7 @@ export default function BlueprintEngine() {
                   Attiva il Motore Esperienziale
                 </h4>
                 <p className="text-xs md:text-sm text-white/40 font-light leading-relaxed text-center mb-8 max-w-sm mx-auto">
-                  Inserisci la sfida del tuo team nel campo di ricerca. Il sistema eseguira' una pre-analisi istantanea e generera' un blueprint sartoriale calibrato sui tuoi obiettivi.
+                  Inserisci la sfida del tuo team nel campo di ricerca. Lumina AI eseguira' una pre-analisi istantanea e generera' un percorso sartoriale calibrato sui tuoi obiettivi.
                 </p>
 
                 <button
@@ -285,7 +285,7 @@ export default function BlueprintEngine() {
               Experience Platform
             </motion.p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-white tracking-tight leading-[1.1]">
-              Lumina <span className="text-gold-metallic font-light">Experience System</span>
+              Lumina <span className="text-gold-metallic font-light">AI</span>
             </h2>
           </motion.div>
         )}
@@ -463,7 +463,7 @@ export default function BlueprintEngine() {
                 const phone = '393476498357'
                 const sectorLabel = SECTOR_GLOW[generatedBlueprint.detectedSector]?.label || 'Enterprise'
                 const excerpt = generatedBlueprint.diagnosticInsight.narrative.substring(0, 100)
-                return `https://wa.me/${phone}?text=${encodeURIComponent(`Buongiorno, ho generato un Blueprint per il settore ${sectorLabel}. Criticita': "${excerpt}...". Vorrei pianificare un audit.`)}`
+                return `https://wa.me/${phone}?text=${encodeURIComponent(`Buongiorno, ho generato un'analisi Lumina AI per il settore ${sectorLabel}. Criticita': "${excerpt}...". Vorrei pianificare un audit.`)}`
               })()}
               target="_blank"
               rel="noopener noreferrer"

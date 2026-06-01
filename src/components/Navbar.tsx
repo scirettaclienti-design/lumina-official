@@ -41,7 +41,7 @@ export default function Navbar() {
   const navItems = [
     { label: 'Audio Manifesto', href: '#ai-narration' },
     { label: 'Esperti', href: '#experts-section' },
-    { label: 'Experience System', href: '#blueprint-results' },
+    { label: 'Lumina AI', href: '#blueprint-results' },
     { label: 'Pacchetti', href: '#packages-section' },
     { label: 'Contatti', href: '#contact-form-section' }
   ]
@@ -117,7 +117,7 @@ export default function Navbar() {
               onClick={handleConfiguratorScroll}
               className="px-4 py-2 border border-gold/30 hover:border-gold bg-gold/5 hover:bg-gold/15 text-gold rounded-full text-[10px] font-medium tracking-widest uppercase transition-all duration-300 cursor-pointer magnetic-target hover:shadow-[0_0_20px_rgba(212,175,55,0.15)]"
             >
-              Crea Blueprint
+              Avvia Lumina AI
             </button>
           </div>
 
@@ -191,7 +191,7 @@ export default function Navbar() {
                 onClick={() => { setMobileMenuOpen(false); handleConfiguratorScroll() }}
                 className="w-full py-5 bg-gold text-dark-navy font-bold text-sm rounded-2xl tracking-[0.2em] uppercase shadow-[0_0_30px_rgba(212,175,55,0.25)] active:scale-95 transition-all cursor-pointer"
               >
-                Crea Blueprint
+                Avvia Lumina AI
               </button>
             </motion.div>
           </motion.div>
