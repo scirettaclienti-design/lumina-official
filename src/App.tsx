@@ -135,8 +135,31 @@ function App() {
           backgroundSize: '60px 60px',
         }} />
 
-        {/* 3D Scroll-Parallax Video Backdrop — disabled on mobile for performance */}
-        {!isMobile && (
+        {/* 3D Scroll-Parallax Video Backdrop */}
+        {/* Desktop: full parallax + blur + scale. Mobile: lightweight scroll-fade only */}
+        {isMobile ? (
+          <motion.div
+            className="fixed inset-0 z-0 pointer-events-none"
+            animate={{ opacity: videoBackgroundActive ? 1 : 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            style={{
+              opacity: useTransform(scrollYProgress, [0, 0.5], [0.2, 0.06]),
+              mixBlendMode: 'screen',
+              willChange: 'opacity',
+              transform: 'translateZ(0)',
+            }}
+          >
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="/hero_background.mp4" type="video/mp4" />
+            </video>
+          </motion.div>
+        ) : (
           <motion.div
             className="fixed inset-0 z-0 pointer-events-none w-[106vw] h-[106vh] -left-[3vw] -top-[3vh]"
             animate={{ opacity: videoBackgroundActive ? 1 : 0 }}
