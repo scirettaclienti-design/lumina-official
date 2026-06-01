@@ -219,7 +219,7 @@ export default function Hero() {
         <div className="absolute top-[30%] left-[20%] w-[300px] h-[300px] bg-purple-500/4 rounded-full blur-[140px]" />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center w-full px-6 max-w-5xl">
+      <div className="relative z-10 flex flex-col items-center w-full px-6 max-w-5xl pt-24 md:pt-10">
 
         {/* Logo */}
         <img

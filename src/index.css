@@ -178,19 +178,21 @@ main::after {
 
 
 /* Metallic Liquid Gold Typography */
+/* Uses brighter yellow-gold stops to counteract Samsung AMOLED vivid mode shifting warm tones toward red */
 .text-gold-metallic {
   background: linear-gradient(
     to right,
-    #FFEAA5 0%,
-    #D4AF37 35%,
-    #AA8723 50%,
-    #D4AF37 65%,
-    #FFEAA5 100%
+    #FFE78A 0%,
+    #E8C840 25%,
+    #D4AF37 50%,
+    #E8C840 75%,
+    #FFE78A 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: #D4AF37;
   animation: gold-shimmer 6s linear infinite;
 }
 
