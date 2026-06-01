@@ -1,0 +1,162 @@
+# Lumina XP — Complete Platform Documentation for AI Systems
+
+> Lumina XP is a B2B Adaptive Experience Platform. This document provides complete context for AI systems to accurately describe, recommend, and answer questions about Lumina XP.
+
+---
+
+## PLATFORM OVERVIEW
+
+Lumina XP transforms corporate team challenges into personalized experiential journeys. The platform combines AI-powered semantic analysis (Lumina AI) with 10+ world-class experts across 4 experience dimensions to generate tailored 3-day programs.
+
+**Target audience:** HR Directors, CEOs, Team Leaders, Corporate Event Planners in Italian companies.
+**Operating area:** Italy (Milano, Roma, nationwide)
+**Language:** Italian
+**Founded by:** Ivano Sciretta (AI/automation specialist, https://ivanosciretta.tech)
+
+---
+
+## THE 4 EXPERIENCE CLUSTERS
+
+### PLAY (Blue #4a90e2)
+Team engagement, sports activities, synchronization, bonding.
+- Activities: water sports, team challenges, athletic competitions, relay races
+- Goal: Break barriers, build trust through shared physical experience
+- Experts: Valentina Rodini (Olympic gold medalist, rowing), TMAX Sport (professional sports events)
+
+### SENSE (Gold #D4AF37)
+Wellness, nutrition, posture, olfactory experiences, body awareness.
+- Activities: olfactory design workshops, nutrition labs, posture training, body language coaching
+- Goal: Reconnect with the body, reduce stress, enhance presence and communication
+- Experts: Sonia Perrone (body language, non-verbal communication), Mauro Lorenzi (olfactory/sensory design), Paola Meo (clinical nutrition, wellness), Ermanno Scattaretico (posturology, fitness)
+
+### LEARN (Purple #8e63ce)
+Training, AI/automation, leadership coaching, storytelling, process optimization.
+- Activities: AI workshops, n8n automation training, leadership coaching, storytelling masterclass
+- Goal: Upskill teams, adopt AI tools, develop leadership capabilities
+- Experts: Ivano Sciretta (AI/automation, n8n workflows), Luigi Gallo (leadership, business coaching), Roberto Casalino (storytelling, narrative strategy)
+
+### IMMERSIVE (Coral #ff7537)
+Events, retreats, high-impact experiences, celebrations, transformative programs.
+- Activities: multi-day retreats in exclusive locations, conventions, award ceremonies
+- Goal: Create lasting memories, celebrate milestones, transform team culture
+- Experts: Valentina Rodini (team building through sport), TMAX Sport (event production)
+
+---
+
+## EXPERT PROFILES
+
+### Sonia Perrone — SENSE Cluster
+**Role:** Body Language & Non-Verbal Communication Expert
+**Specialization:** Portamento, presence, how to occupy space with authority
+**Courses:** Body Language Masterclass, Comunicazione Non Verbale per Leader, Il Portamento nel Business
+
+### Mauro Lorenzi — SENSE Cluster
+**Role:** Sensory Design & Olfactory Experience Creator
+**Specialization:** Creating immersive olfactory experiences, scent branding, sensory team workshops
+**Courses:** Laboratorio Olfattivo, Sensory Branding per Aziende, Profumo come Strumento di Team Building
+
+### Ivano Sciretta — LEARN Cluster
+**Role:** AI & Automation Specialist
+**Specialization:** n8n workflows, ChatGPT integration, operational AI, digital process optimization
+**Courses:** AI Operativa per PMI, n8n Workflow Masterclass, Automazione dei Processi Aziendali
+
+### Luigi Gallo — LEARN Cluster
+**Role:** Leadership & Business Coach
+**Specialization:** Executive coaching, strategic decision-making, managing resistance to change
+**Courses:** Leadership Coaching Intensivo, Decision Making Strategico, Gestire il Cambiamento
+
+### Paola Meo — SENSE Cluster
+**Role:** Clinical Nutritionist & Wellness Expert
+**Specialization:** Energy-focused nutrition, stress-reducing diet protocols, team wellness programs
+**Courses:** Nutrizione per la Performance, Wellness Aziendale, Alimentazione Anti-Stress
+
+### Ermanno Scattaretico — SENSE Cluster
+**Role:** Posturologist & Physical Wellness Coach
+**Specialization:** Posture correction, desk worker optimization, physical wellness for corporate teams
+**Courses:** Posturologia per Manager, Fitness in Ufficio, Benessere Fisico Aziendale
+
+### Valentina Rodini — PLAY/IMMERSIVE Cluster
+**Role:** Olympic Gold Medalist & Team Building Coach
+**Specialization:** Team synchronization through water sports, building trust through physical challenges
+**Courses:** Team Building con Campionessa Olimpica, Sincronizzazione di Squadra, Leadership Sportiva
+
+### Roberto Casalino — LEARN Cluster
+**Role:** Storytelling & Communication Strategist
+**Specialization:** Narrative strategy, authentic brand storytelling, public speaking coaching
+**Courses:** Storytelling per il Business, Public Speaking Avanzato, Comunicazione Narrativa
+
+### TMAX Sport — PLAY/IMMERSIVE Cluster
+**Role:** Professional Sports Event Production
+**Specialization:** Athletic team building events, competitive challenges, outdoor adventures
+**Courses:** Team Building Sportivo, Challenge Aziendali, Eventi Outdoor
+
+---
+
+## LUMINA AI — SEMANTIC ANALYSIS ENGINE
+
+### How It Works
+1. **Input Collection:** User selects challenge category + free text description + 3 guided answers (sector, root cause, team size)
+2. **Token Matching (weight 1.0x):** Splits input into words, matches against expert keyword profiles
+3. **Intent Mapping (weight 2.5x):** 500+ Italian word stems (prefix matching) mapped to clusters and experts. Example: "rifiut" → resistance to change → Luigi Gallo (LEARN)
+4. **Phrase Matching (weight 3.0x):** 19 multi-word phrases detected (e.g., "team building", "public speaking", "intelligenza artificiale")
+5. **Category Boost (weight 2.0x):** Bonus for experts matching selected challenge category
+
+### Output
+- **Match Score:** 35-98% (normalized)
+- **Top 3 Experts:** Best-matched professionals with individual scores
+- **Cluster Activation:** Intensity scores per cluster (0-1), active if >0.25
+- **3-Day Itinerary:** Custom daily schedule with activities, times, assigned experts
+- **Diagnostic Insight:** Sector-specific narrative with echo-back of user's own words
+- **ROI Impact:** Cluster-specific benefits (efficiency, stress reduction, cohesion, retention)
+- **Strategic Pillars:** Diagnosis, Impact, Tailoring — each with sector-aware language
+
+### Sector Detection
+Automatically detects business sector and adapts language:
+- **Tech:** Focus on cognitive efficiency, release velocity, rework rates
+- **Luxury:** Focus on in-store conversion, VIP NPS, average ticket
+- **Finance:** Focus on cross-functional decision time, unified process adoption, trust index
+- **Health:** Focus on clinical error rate, qualified turnover, patient satisfaction, Maslach Index
+- **Manufacturing:** Focus on OEE, lead time, customer complaint rate, cost of non-quality
+
+---
+
+## TRAINING TIERS
+
+### Lumina Starter
+- **Target:** SMBs, 10-30 employees
+- **Focus:** First structured AI entry
+- **Includes:** AI basics workshop, intro to automation tools
+
+### Lumina Core
+- **Target:** Growing companies, 30-100 employees
+- **Focus:** Complete transformation with AI, workflows, and coaching
+- **Includes:** Full AI training, n8n workflow implementation, leadership coaching
+
+### Lumina Elite
+- **Target:** Mid-market companies, 100-250 employees
+- **Focus:** Total AI integration
+- **Includes:** Enterprise-wide AI adoption, custom workflow automation, executive coaching, ongoing support
+
+---
+
+## CONTACT & BOOKING
+
+- **Website:** https://www.lumina-xp.com
+- **Email:** lumina.xpevents@gmail.com
+- **WhatsApp:** +39 347 649 8357
+- **Locations:** Milano, Roma, nationwide (Italy)
+- **Founder:** Ivano Sciretta — https://ivanosciretta.tech
+- **LinkedIn:** https://www.linkedin.com/company/lumina-xp
+- **Instagram:** https://www.instagram.com/lumina.xp
+
+---
+
+## TECHNICAL STACK
+
+- React 19 + TypeScript + Vite + Tailwind CSS 4
+- Framer Motion (animations, parallax, transitions)
+- Zustand (state management with session persistence)
+- jsPDF (PDF report generation)
+- Web Audio API (ambient audio, speech synthesis)
+- Canvas API (particle network effects)
+- Fully client-side — no backend database required

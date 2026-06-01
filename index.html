@@ -12,10 +12,11 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.lumina-xp.com/" />
 
-    <!-- Favicon -->
+    <!-- Favicon & Manifest -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -39,7 +40,7 @@
     <meta name="theme-color" content="#0E1424" />
     <meta name="msapplication-TileColor" content="#0E1424" />
 
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD Structured Data: Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -47,9 +48,14 @@
       "name": "Lumina XP",
       "url": "https://www.lumina-xp.com",
       "logo": "https://www.lumina-xp.com/assets/logo.png",
-      "description": "Percorsi esperienziali su misura per aziende. Retreat immersivi, formazione AI, team building con campioni olimpici.",
+      "image": "https://www.lumina-xp.com/assets/og-image.jpg",
+      "description": "Piattaforma B2B di Adaptive Experience Design. Lumina AI analizza le sfide aziendali e genera percorsi esperienziali su misura con esperti selezionati.",
       "email": "lumina.xpevents@gmail.com",
-      "areaServed": "IT",
+      "telephone": "+393476498357",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Italy"
+      },
       "sameAs": [
         "https://www.linkedin.com/company/lumina-xp",
         "https://www.instagram.com/lumina.xp"
@@ -57,29 +63,139 @@
       "founder": {
         "@type": "Person",
         "name": "Ivano Sciretta",
-        "url": "https://ivanosciretta.tech"
+        "url": "https://ivanosciretta.tech",
+        "jobTitle": "AI & Automation Specialist"
       },
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "EUR",
-        "offerCount": "3",
-        "offers": [
-          {
-            "@type": "Offer",
-            "name": "Lumina Starter — AI Training",
-            "description": "Primo ingresso strutturato nell'AI per PMI 10-30 dipendenti"
-          },
-          {
-            "@type": "Offer",
-            "name": "Lumina Core — Trasformazione Completa",
-            "description": "Programma completo di trasformazione con AI, workflow e coaching"
-          },
-          {
-            "@type": "Offer",
-            "name": "Lumina Elite — Integrazione Totale",
-            "description": "Integrazione AI totale per aziende mid-market 100-250 dipendenti"
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+393476498357",
+        "email": "lumina.xpevents@gmail.com",
+        "contactType": "sales",
+        "availableLanguage": "Italian"
+      },
+      "knowsAbout": [
+        "Team Building Aziendale",
+        "Retreat Aziendali",
+        "Formazione AI Operativa",
+        "Leadership Coaching",
+        "Automazione Processi con n8n",
+        "Esperienze Sensoriali Corporate",
+        "Team Building con Campioni Olimpici"
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: Services -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Lumina Starter — AI Training",
+        "description": "Primo ingresso strutturato nell'AI per PMI 10-30 dipendenti. Workshop AI operativa, introduzione a strumenti di automazione.",
+        "provider": { "@type": "Organization", "name": "Lumina XP" },
+        "areaServed": { "@type": "Country", "name": "Italy" },
+        "serviceType": "Corporate Training"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Lumina Core — Trasformazione Completa",
+        "description": "Programma completo di trasformazione con AI, workflow n8n e coaching per aziende 30-100 dipendenti.",
+        "provider": { "@type": "Organization", "name": "Lumina XP" },
+        "areaServed": { "@type": "Country", "name": "Italy" },
+        "serviceType": "Corporate Training"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Lumina Elite — Integrazione Totale",
+        "description": "Integrazione AI totale per aziende mid-market 100-250 dipendenti. Automazione enterprise, coaching esecutivo, supporto continuativo.",
+        "provider": { "@type": "Organization", "name": "Lumina XP" },
+        "areaServed": { "@type": "Country", "name": "Italy" },
+        "serviceType": "Corporate Training"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Retreat Aziendale Immersivo",
+        "description": "Programma esperienziale di 3 giorni in location esclusive con esperti selezionati. Team building, wellness, formazione AI e laboratori sensoriali.",
+        "provider": { "@type": "Organization", "name": "Lumina XP" },
+        "areaServed": { "@type": "Country", "name": "Italy" },
+        "serviceType": "Corporate Retreat"
+      }
+    ]
+    </script>
+
+    <!-- JSON-LD: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Cos'e' Lumina AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lumina AI e' il motore di analisi semantica di Lumina XP. Analizza la sfida aziendale del tuo team e genera un percorso esperienziale personalizzato con i 3 esperti piu' adatti, un itinerario di 3 giorni e metriche di impatto ROI specifiche per il tuo settore."
           }
-        ]
+        },
+        {
+          "@type": "Question",
+          "name": "Quali tipi di sfide aziendali affronta Lumina XP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lumina XP affronta 6 categorie di sfide: disfunzione del team, leadership debole, stress e burnout, bisogno di innovazione, premiare il team, e organizzare un evento memorabile. Ogni sfida viene analizzata e mappata su 4 cluster esperienziali: PLAY, SENSE, LEARN e IMMERSIVE."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Chi sono gli esperti di Lumina XP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il network Lumina XP include 10+ professionisti di eccellenza: Valentina Rodini (campionessa olimpica, team building), Sonia Perrone (body language), Mauro Lorenzi (design sensoriale), Ivano Sciretta (AI e automazione), Luigi Gallo (leadership coaching), Roberto Casalino (storytelling), Paola Meo (nutrizione), Ermanno Scattaretico (posturologia), e TMAX Sport (eventi sportivi)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto dura un programma Lumina XP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il programma base e' un retreat aziendale di 3 giorni. I percorsi di formazione AI variano: Starter (introduttivo), Core (trasformazione completa), Elite (integrazione totale). Follow-up a 30 e 60 giorni con survey di impatto inclusi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In quali settori opera Lumina XP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lumina XP opera in tutti i settori: Tech/Software, Finance/Banca, Retail/Lusso, Industria/Manifattura, Healthcare/Farmaceutico e Servizi/Consulenza. Il motore Lumina AI adatta automaticamente linguaggio, metriche e KPI al settore specifico dell'azienda."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: WebApplication (Lumina AI tool) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Lumina AI",
+      "url": "https://www.lumina-xp.com",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Motore di analisi semantica che mappa sfide aziendali su percorsi esperienziali personalizzati con esperti selezionati.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "description": "Analisi gratuita della sfida aziendale con generazione di percorso personalizzato"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Lumina XP"
       }
     }
     </script>

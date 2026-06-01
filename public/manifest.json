@@ -1,0 +1,34 @@
+{
+  "name": "Lumina XP — Percorsi Esperienziali AI per Aziende",
+  "short_name": "Lumina XP",
+  "description": "Piattaforma B2B di Adaptive Experience Design. Lumina AI analizza la sfida del tuo team e genera percorsi personalizzati con esperti selezionati.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0E1424",
+  "theme_color": "#0E1424",
+  "orientation": "portrait-primary",
+  "lang": "it",
+  "icons": [
+    {
+      "src": "/favicon-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

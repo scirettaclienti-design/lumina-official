@@ -1,0 +1,48 @@
+# Lumina XP — Human Centered Experience Platform
+
+> Lumina XP is a B2B Adaptive Experience Platform that maps corporate team challenges to personalized experiential journeys powered by AI analysis.
+
+## What Lumina XP Does
+
+Lumina XP helps companies transform team challenges (burnout, weak leadership, team dysfunction, lack of innovation) into tailored 3-day experiential programs. The platform uses Lumina AI, a semantic analysis engine, to match business challenges with the right combination of 10+ world-class experts across 4 experience dimensions.
+
+## The 4 Experience Clusters
+
+- **PLAY** — Team engagement, sports, synchronization, bonding (Olympic athletes, sports events)
+- **SENSE** — Wellness, nutrition, posture, olfactory experiences, body awareness
+- **LEARN** — AI/automation training, leadership coaching, storytelling, process optimization
+- **IMMERSIVE** — Retreats, high-impact events, celebrations, transformative experiences
+
+## How Lumina AI Works
+
+1. User selects a challenge category (team dysfunction, weak leadership, stress/burnout, innovation, reward, memorable event)
+2. Describes their specific situation in free text
+3. Answers 3 guided questions (industry sector, root cause, team size)
+4. Lumina AI analyzes the input using 500+ Italian semantic stems, phrase matching, and intent detection
+5. Generates a personalized 3-day itinerary with top 3 matched experts, cluster activation scores, and sector-specific insights
+
+## Services Offered
+
+- **Corporate Retreats** — 3-day immersive programs in exclusive locations
+- **AI Training** — Operational AI and automation training (n8n, ChatGPT, workflow optimization)
+- **Team Building** — Activities with Olympic champions and professional coaches
+- **Sensory Laboratories** — Olfactory design, nutrition workshops, body language training
+- **Leadership Coaching** — Executive coaching, strategic decision-making, storytelling
+
+## Training Tiers
+
+- **Lumina Starter** — First structured AI entry for SMBs (10-30 employees)
+- **Lumina Core** — Complete transformation with AI, workflows, and coaching
+- **Lumina Elite** — Total AI integration for mid-market companies (100-250 employees)
+
+## Contact
+
+- Website: https://www.lumina-xp.com
+- Email: lumina.xpevents@gmail.com
+- WhatsApp: +39 347 649 8357
+- Location: Milano / Roma / Tutta Italia
+- Founded by: Ivano Sciretta (https://ivanosciretta.tech)
+
+## For More Details
+
+See [llms-full.txt](https://www.lumina-xp.com/llms-full.txt) for the complete technical documentation including expert profiles, matching algorithms, and platform architecture.
